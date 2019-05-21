@@ -46,7 +46,7 @@ export default class MomentUtils extends DefaultMomentUtils {
   }
 
   private toJMoment(date?: any) {
-    return this.moment(date ? date.clone() : undefined).locale("fa");
+    return this.moment(date ? date.clone() : undefined);
   }
 
   public parse(value: string, format: string) {
@@ -54,7 +54,7 @@ export default class MomentUtils extends DefaultMomentUtils {
       return null;
     }
 
-    return this.moment(value, format, true).locale("fa");
+    return this.moment(value, format, true);
   }
 
   public date(value?: any) {
@@ -62,7 +62,7 @@ export default class MomentUtils extends DefaultMomentUtils {
       return null;
     }
 
-    return this.moment(value).locale("fa");
+    return this.moment(value);
   }
 
   public isBeforeYear(date: Moment, value: Moment) {
